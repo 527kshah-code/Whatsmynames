@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>K-pop profile name generator</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -40,7 +40,7 @@
                                     </select>
                             </div>
                             <div class="name">
-                                    <label for="q2" class="form-label fw-semibold">What letter does your mane start with?</label>
+                                    <label for="q2" class="form-label fw-semibold">What is your first name?</label>
                                     <input type="text" id="q2" class="form-control">
                             </div>
                             <div class="lastName">
@@ -51,8 +51,22 @@
                                     <label for="q4" class="form-label fw-semibold">When is your birthday month?</label>
                                     <input type="range" class="form-range" min="1" max="12" step="1" value="1" id="q4" oninput="updateMonthLabel(this.value)">
                             </div>
+                            <div class="month-lable d-flex justify-content-between mt-2">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                                <span>Sep</span>
+                                <span>Oct</span>
+                                <span>Nov</span>
+                                <span>Dec</span>
+                            </div>
                             <div class="animal">
-                                <label for="q5" class="form-label fw-semibold">What qualities would describe you?</label>
+                                <label for="q5" class="form-label fw-semibold">What qualities would describe you? Choose 2!</label>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="q5_confident">
                                     <label class="form-check-label" for="q5_confident">Confident</label>
@@ -97,9 +111,12 @@
                                     <input class="form-check-input" type="checkbox" value="" id="q5_creative">
                                     <label class="form-check-label" for="q5_creative">Creative</label>
                                 </div>
-
                             </div>
-                        </div>
+                            <button id="generateBtn" class="btn btn-primary mt-3">Generate Name</button>
+                            <div class="result mt-3">
+                                <h5>Your K-pop profile name is:</h5>
+                                <p id="profileName" class="fw-bold"></p>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -107,7 +124,7 @@
         <footer>
             <!-- place footer here -->
         </footer>
-        <script src="script.js"></script>
+        <script src="srcript.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
